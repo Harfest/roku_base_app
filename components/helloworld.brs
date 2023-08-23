@@ -1,22 +1,63 @@
 sub init()
-    getDeviceInfo()
-
     setupRefs()
-    setupLabel()
-end sub
-
-sub getDeviceInfo()
-    di = createObject("roDeviceInfo")
+    createContent()
 end sub
 
 sub setupRefs()
-    m.myLabel = m.top.findNode("myLabel")
+    top = m.top
+    m.scrollingContainer = top.findNode("scrollingContainer")
 end sub
 
-sub setupLabel()
-    m.myLabel.text = "Some text here that is not available"
-    m.myLabel.font.size = 25
-    m.myLabel.translation = [60, 60]
-    m.myLabel.wrap = true
-    m.myLabel.setFocus(true)
+sub createContent()
+    itemsConfig = [
+        { ' hero
+            width: 1124
+            height: 369
+            margin: 6
+        }
+        { ' row
+            width: 1124
+            height: 150
+            margin: 24
+        }
+        { ' row
+            width: 1124
+            height: 150
+            margin: 24
+        }
+        { ' row
+            width: 1124
+            height: 150
+            margin: 24
+        }
+        { ' banner
+            width: 1124
+            height: 0
+            margin: 24
+        }
+        { ' row
+            width: 1124
+            height: 150
+            margin: 24
+        }
+        { ' row
+            width: 1124
+            height: 150
+            margin: 24
+        }
+        { ' row
+            width: 1124
+            height: 150
+            margin: 24
+        }
+    ]
+
+    scrollingComponentConfig = {
+        contentPadding: 12
+        itemsBoundaries: itemsConfig
+        infiniteScrolling: true
+    }
+
+    m.scrollingContainer.config = scrollingComponentConfig
+    m.scrollingContainer.setFocus(true)
 end sub

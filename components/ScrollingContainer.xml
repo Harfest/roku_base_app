@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ScrollingContainer" extends="Group">
+    <interface>
+        <field id="config" type="assocArray" onChange="createItems" />
+    </interface>
+	<children>
+		<rectangle id="itemsContainer" color="0x880088FF" width="1148" height="654" translation="[66, 33]" />
+    </children>
+	<script type="text/brightscript" uri="pkg:/components/ScrollingContainer.brs"></script>
+</component>

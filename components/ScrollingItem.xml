@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ScrollingItem" extends="Group">
+    <interface>
+        <field id="itemIndex" type="integer" alias="text.text" />
+        <field id="width" type="integer" alias="itemsContainer.width" />
+        <field id="height" type="integer" alias="itemsContainer.height" />
+    </interface>
+	<children>
+		<rectangle id="itemsContainer" color="0x00F5F1FF">
+            <Label id="text" color="0x000000ff" />
+        </rectangle>
+    </children>
+	<script type="text/brightscript" uri="pkg:/components/ScrollingItem.brs"></script>
+</component>
